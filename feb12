@@ -36,8 +36,7 @@ abs(-3)
 #for strings, single or double quotes
 
 #The help() function is possibly the most important Python function you can learn. If you can remember how to use help(), you hold the key to understanding most other functions
-#round(number, ndigits=None)n digits can be negative,0 is to int, 1 to 1 decimal place. ndigits=-1 rounds to the nearest 10, ndigits=-2 rounds to the nearest 100 and so on
-
+#round(number, ndigits=None)n digits can be negative,0 is to int, 1 to 1 decimal place. ndigits=-1 rounds to the nearest 10, ndigits=-2 rounds to the nearest 100 and so on.negative numbers is how many 0s we want
 
 #FUNCTIONS
 def least_difference(a, b, c):
@@ -45,9 +44,105 @@ def least_difference(a, b, c):
     diff2 = abs(b - c)
     diff3 = abs(a - c)
     return min(diff1, diff2, diff3)
+       
+#functions with no return: Python allows us to define such functions. The result of calling them is the special value None
+#This is similar to the concept of "null" in other languages
     
+#sep='\n', '\n' is the newline character - it starts a new line
     
-    #functions with no return: Python allows us to define such functions. The result of calling them is the special value None
-    #This is similar to the concept of "null" in other languages
+def to_smash(total_candies, n_friends=3):
+    return total_candies % n_friends
     
-    #sep='\n', '\n' is the newline character - it starts a new line
+#this makes the default number of friends 3
+
+def is_odd(n):
+    return (n % 2) == 1
+
+print("Is 100 odd?", is_odd(100))
+print("Is -1 odd?", is_odd(-1))
+
+#returns true or false
+# use the words and or and not
+
+def inspect(x):
+    if x == 0:
+        print(x, "is zero")
+    elif x > 0:
+        print(x, "is positive")
+    elif x < 0:
+        print(x, "is negative")
+    else:
+        print(x, "is unlike anything I've ever seen...")
+
+inspect(0)
+inspect(-15)
+
+# gives 0 is zero
+#-15 is negative
+
+#an unindented line ends the function definition or the if statement
+
+bool(2)
+True
+
+# all numbers are treated as true, except 0, all strings are treated as true, except the empty string ""
+
+
+#my sign function 
+def sign(float1):
+    if float1 > 0:
+        return 1
+    elif float1 == 0:
+        return 0
+    elif float1 < 0:
+        return -1
+#note: you need the : after the def, if statements need : too and indenting, == not =.if not doing all elifs, the last one is "else"
+#and RETURN NOT PRINT when in a function or if statement
+
+def sign(x):
+    if x > 0:
+        return 1
+    elif x < 0:
+        return -1
+    else:
+        return 0
+
+#RETURN NEEDS TO HAPPEN INSIDE A FUNCTION
+
+
+def exactly_one_topping(ketchup, mustard, onion):
+    """Return whether the customer wants exactly one of the three available toppings
+    on their hot dog.
+    """
+    return (ketchup+mustard+onion == 1)
+#this changes the strings to ints, could also add together int(ketchup) which would be 1 if there was ketchup and 0 if not
+
+
+#LISTS
+planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+
+
+planets[0]
+#Mercury
+
+planets[-1]
+#last element in the list
+
+planets[0:3] #or planets[:3]
+#gives first three. so, up to but not including planet[3]. 0, 1, and 2
+planets[3:]
+#all from index 3 onward
+planets[1:-1]
+#all except first and last
+
+len(planets)
+#length of a list
+sorted(planets)
+planets.append('Pluto')
+#adds to end
+planets.pop()
+#list.pop REMOVES and returns the last element of a list:
+
+planets.index('Earth')
+
+
