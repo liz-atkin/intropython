@@ -19,3 +19,35 @@ print(viking_song)
 
 #Strings can be marked either by double or single quotation marks.
 
+type(spam_amount) #gives type like int
+
+#Arithmetic
+#a / b true division
+# a // b floor division
+# a % b mod (remainder after division)
+# a ** b exponentiation
+
+total_height_meters = (hat_height_cm + my_height_cm) / 100
+print("Height in meters =", total_height_meters)
+#they do order of operations so use parentheses
+abs(-3)
+# = 3
+
+#for strings, single or double quotes
+
+#The help() function is possibly the most important Python function you can learn. If you can remember how to use help(), you hold the key to understanding most other functions
+#round(number, ndigits=None)n digits can be negative,0 is to int, 1 to 1 decimal place. ndigits=-1 rounds to the nearest 10, ndigits=-2 rounds to the nearest 100 and so on
+
+
+#FUNCTIONS
+def least_difference(a, b, c):
+    diff1 = abs(a - b)
+    diff2 = abs(b - c)
+    diff3 = abs(a - c)
+    return min(diff1, diff2, diff3)
+    
+    
+    #functions with no return: Python allows us to define such functions. The result of calling them is the special value None
+    #This is similar to the concept of "null" in other languages
+    
+    #sep='\n', '\n' is the newline character - it starts a new line
