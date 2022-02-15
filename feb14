@@ -1,0 +1,93 @@
+#you'll need to explicitly convert the types of your variables. More specifically, you'll need str(), to convert a value into a string. 
+#str(savings), for example, will convert the integer savings to a string.
+
+#Similar functions such as int(), float() and bool() will help you convert Python values into any type
+
+savings = 100
+result = 100 * 1.10 ** 7
+print("I started with $" + str(savings) + " and now have $" + str(result) + ". Awesome!")
+
+pi_string = "3.1415926"
+# Convert pi_string into float: pi_float
+pi_float=float(pi_string)
+
+#build a list with []
+
+#[[],[],[]] works
+#first index is list[0], last one is list[-1]
+
+# fam[3:5] includes index 3 and 4, NOT 5. inclusive:exclusive
+
+# downstairs=areas[0:6] this is the First Six Elements
+# upstairs=areas[-4:] this is the Last Four Elements
+
+x = ["a", "b", "c", "d"]
+x[:2]
+x[2:]
+x[:]
+
+#there is list x. make y=x. change y[1]. x[1] changes too
+# to make this not happen, do y=list(x) or y=x[:]
+
+#delete elements with del(x[1]) then the rest of the indexes change
+
+The ; sign is used to place commands on the same line. The following two code chunks are equivalent:
+# Same line
+command1; command2
+
+# Separate lines
+command1
+command2
+
+#call methods on different python objects with dot notation, like areas.index(xyz) or areas.count("o")
+#remember to print
+
+#areas.reverse() reverses areas. remember dot notation
+
+# install and import numpy. then call functions numpy.array([1,2,3]). if u import as np, then np.array
+
+import math
+pi=math.pi
+
+#lists can't perform calculations among the whole thing element wise, so do import numpy as np then np_height=np.array(height)
+
+python_list+python list - 1,2,3,1,2,3
+np.array(python_list)+np.array(python_list) - 2,4,6 
+
+baseball = [180, 215, 210, 210, 188, 176, 209, 200]
+
+# Import the numpy package as np
+import numpy as np
+
+# Create a numpy array from baseball: np_baseball
+np_baseball=np.array(baseball)
+
+# Print out type of np_baseball
+print(type(np_baseball))
+
+bmi = np_weight_kg / np_height_m ** 2
+
+# Create the light array - this array is of booleans?
+light = bmi < 21
+
+# Print out light
+print(light)
+
+# Print out BMIs of all baseball players whose BMI is below 21
+print(bmi[light])
+
+#numpy arrays have to be homogeneous in type
+# print(np_baseball.shape) shape is an attribute not method so no ()
+
+
+# Create np_baseball (2 cols)
+np_baseball = np.array(baseball)
+
+# Print out the 50th row of np_baseball
+print(np_baseball[49,:])
+
+# Select the entire second column of np_baseball: np_weight_lb
+np_weight_lb=np_baseball[:,1]
+
+# Print out height of 124th player
+print(np_baseball[123,0])
