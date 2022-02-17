@@ -1,0 +1,13 @@
+import numpy as np
+np_city=np.array([11,2,5,3,2],[23,4,5,5,6])
+np.mean(np_city[0,:])
+
+#Create numpy array np_height_in that is equal to first column of np_baseball.
+np_height_in=np_baseball[:,0]
+np.mean(np_height_in)
+
+med = np.median(np_baseball[:,0])
+print("Median: " + str(med))
+
+corr = np.corrcoef(np_baseball[:,0],np_baseball[:,1])
+print("Correlation: " + str(corr))
