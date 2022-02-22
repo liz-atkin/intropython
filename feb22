@@ -1,0 +1,42 @@
+# Create histogram of life_exp data
+plt.hist(life_exp)
+
+# Display histogram
+plt.show()
+
+#line plot
+plt.plot(life_exp)
+#scatter plot
+plt.scatter(life_exp)
+#histogram
+plt.hist(life_exp)
+#axes
+plt.xlabel('string')
+plt.ylabel('string')
+#title
+plt.title('string')
+#tick marks
+plt.yticks([0, 2, 4, 6])
+
+#make the scale log??
+plt.xscale('log') 
+
+plt.scatter(gdp_cap, life_exp)
+plt.xscale('log') 
+
+# Strings
+xlab = 'GDP per Capita [in USD]'
+ylab = 'Life Expectancy [in years]'
+title = 'World Development in 2007'
+
+# Add axis labels
+plt.xlabel(xlab)
+plt.ylabel(ylab)
+plt.title(title)
+# Add title
+
+
+# After customizing, display the plot
+plt.show()
+
+#REMEMBER PLT DOT
