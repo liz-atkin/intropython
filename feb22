@@ -105,3 +105,17 @@ data={'capital':'rome','population':59.83}
 europe['italy']=data
 
 cars=pd.DataFrame(my_dict)
+
+cars = pd.DataFrame(cars_dict)
+
+# Specify row labels of cars
+cars.index=row_labels
+
+# Import pandas as pd
+import pandas as pd
+
+# Import the cars.csv data: cars
+cars = pd.read_csv('cars.csv')
+
+# Print out cars
+print(cars)
