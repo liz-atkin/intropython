@@ -1,9 +1,3 @@
-# Create histogram of life_exp data
-plt.hist(life_exp)
-
-# Display histogram
-plt.show()
-
 #line plot
 plt.plot(life_exp)
 #scatter plot
@@ -40,3 +34,74 @@ plt.title(title)
 plt.show()
 
 #REMEMBER PLT DOT
+
+#size of scatter plot dots
+# Import numpy as np
+import numpy as np
+
+# Store pop as a numpy array: np_pop
+np_pop=np.array(pop)
+
+# Double np_pop
+np_pop=np_pop*2
+
+# Update: set s argument to np_pop
+plt.scatter(gdp_cap, life_exp, s = np_pop)
+
+
+europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin', 'norway':'oslo' }
+#curly braces
+
+# Print out the keys in europe
+print(europe.keys())
+
+# Print out value that belongs to key 'norway'
+print(europe['norway'])
+
+#remember its name dot method, like europe dot keys or np dot arrays
+
+#Adding points to dictionaries
+# Definition of dictionary
+europe = {'spain':'madrid', 'france':'paris', 'germany':'berlin', 'norway':'oslo' }
+
+# Add italy to europe
+europe['italy']='rome'
+
+# Print out italy in europe
+print('italy' in europe)
+#prints true
+
+# Add poland to europe
+europe['poland']='warsaw'
+
+# Print europe
+print(europe)
+
+
+# Update capital of germany
+europe['germany']='berlin'
+
+#DELETE ENTRY
+# Remove australia
+del(europe['australia'])
+
+# Print europe
+print(europe)
+
+# Dictionary of dictionaries
+europe = { 'spain': { 'capital':'madrid', 'population':46.77 },
+           'france': { 'capital':'paris', 'population':66.03 },
+           'germany': { 'capital':'berlin', 'population':80.62 },
+           'norway': { 'capital':'oslo', 'population':5.084 } }
+
+
+# Print out the capital of France
+print(europe['france']['capital'])
+
+# Create sub-dictionary data
+data={'capital':'rome','population':59.83}
+
+# Add data to europe under key 'italy'
+europe['italy']=data
+
+cars=pd.DataFrame(my_dict)
