@@ -1,0 +1,17 @@
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+cars['cars_per_cap']
+#that gives pandas series
+cars[['cars_per_cap']]
+#that gives pandas data frame
+
+
+# Import cars data
+#import pandas as pd
+#cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Print out observation for Japan
+print(cars.loc['JPN'])
+
+# Print out observations for Australia and Egypt
+print(cars.loc[['AUS','EG']])
