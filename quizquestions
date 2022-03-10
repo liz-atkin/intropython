@@ -1,0 +1,4 @@
+What are the three arguments for np.random.normal()?
+distribution mean, distribution std dev, number of samples
+
+
